@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "pywarschart.fullname" . }}
+  labels:
+{{ include "pywarschart.labels" . | indent 4 }}
+spec:
+  clusterIP: None
